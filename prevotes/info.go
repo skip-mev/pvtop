@@ -4,13 +4,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"gopkg.in/yaml.v3"
 	"io"
 	"log"
 	"net/http"
 	"strconv"
 	"strings"
 	"sync"
+
+	"gopkg.in/yaml.v3"
 
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
@@ -215,7 +216,6 @@ func (v *ValNames) GetInfo(index int) string {
 	}
 	if len([]byte(moniker)) > len(moniker) {
 		moniker = moniker[:len([]byte(moniker))-len(moniker)]
-
 	}
 	return fmt.Sprintf("%-3d %-.2f%%   %-20s ", index+1, v.getPower(index)*100.0, moniker)
 }
