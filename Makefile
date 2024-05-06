@@ -1,8 +1,4 @@
-
 #!/usr/bin/make -f
-
-export VERSION := $(shell echo $(shell git describe --always --match "v*") | sed 's/^v//')
-export COMMIT := $(shell git log -1 --format='%H')
 
 BIN_DIR ?= $(GOPATH)/bin
 BUILD_DIR ?= $(CURDIR)/build
